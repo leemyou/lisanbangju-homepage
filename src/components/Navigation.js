@@ -14,7 +14,7 @@ const Navigation = () => {
     <Navbar  bg="light" variant="pills" sticky="top" collapseOnSelect expand="lg">
     <Container>
         <Navbar.Brand>
-            <Link to="Home" spy={true} smooth={true}>
+            <Link to="Home" spy={true} smooth={true} duration={500}>
                 <h1>일산방주교회</h1>
                 {/* 원래는 로고가 들어가야 함 */}
             </Link>
