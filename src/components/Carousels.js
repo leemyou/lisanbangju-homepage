@@ -1,49 +1,56 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import Holder from 'react-holder-component';
+import './Carousel.css';
 
 function CarouselFadeExample() {
     return (
-    <Carousel variant='dark'>
+    <Carousel fade variant='dark'>
+
         <Carousel.Item style={{height:'100vh'}}>
-            <Holder
-                className="d-block w-100"
+        <Holder
+                className=" w-100 h-100"
                 width= '800px'
-                height= '100%'
-                updateOnResize={true}
-                alt="First Selide"
-            />
-            <Carousel.Caption>
-                <h3>First slide label</h3>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </Carousel.Caption>
-        </Carousel.Item>
-        
-        <Carousel.Item style={{height:'100vh'}}>
-            <Holder
-                className="d-block w-100"
-                width= '800px'
-                height= '100%'
-                updateOnResize={true}
-                alt="First Selide"
-            />
-            <Carousel.Caption>
-                <h3>Second slide label</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </Carousel.Caption>
-        </Carousel.Item>
-        
-        <Carousel.Item style={{height:'100vh'}}>
-            <Holder
-                className="d-block w-100"
-                width= '800px'
-                height= '100%'
+                height= '50%'
                 updateOnResize={true}
                 text='"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"'
                 alt="First Selide"
+                placeholder={{ 
+                    theme: 'lava',
+                }}
             />
-            <Carousel.Caption>
-                <h3>Third slide label</h3>
+            <Carousel.Caption className='Carousel-title'>
+                <h1>일산방주교회</h1>
+                <p className='home-subtitle'>기독교대한감리회</p>
+            </Carousel.Caption>
+        </Carousel.Item>
+        
+        <Carousel.Item style={{height:'100vh'}}>
+            <Holder
+                className="d-block w-100 h-100"
+                width= '800px'
+                height= '90%'
+                text='"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"'
+                updateOnResize={true}
+                alt="First Selide"
+            />
+            <Carousel.Caption className='Carousel-title'>
+                <h1>No Cross No Crown</h1>
+                <p>십자가 없이는 면류관도 없다</p>
+            </Carousel.Caption>
+        </Carousel.Item>
+        
+        <Carousel.Item style={{height:'100vh'}}>
+            <Holder
+                className="d-block w-100 h-100"
+                width= '800px'
+                height= '90%'
+                updateOnResize={true}
+                
+                alt="First Selide"
+            />
+            <Carousel.Caption className='Carousel-title'>
+                <h1>Third slide label</h1>
                 <p>
                     Praesent commodo cursus magna, vel scelerisque nisl consectetur.
                 </p>
