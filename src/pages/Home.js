@@ -10,7 +10,6 @@ const Home = () => {
     //     <h1>Home</h1>
     // </Container>
     <div className='main-body' id='Home'>
-        {/* <div className='main-title'/> */}
         <Carousels />
     </div>
 
