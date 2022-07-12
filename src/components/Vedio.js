@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import styled from 'styled-components';
 
 const VedioMain = styled.div`
-    width: 1280px;
+    max-width: 1280px;
     height: 720px;
     background-color: white;
     margin: 50px auto 0 auto;

@@ -16,10 +16,3 @@ export const Words = () => {
 
 
 export default Words;
-
-// export const Container = styled.div`
-//     width: 100%;
-//     height: 100vh;
-//     background-color: #666;
-//     padding-top: 100px;
-// `
