@@ -7,8 +7,6 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
-// import { Link } from "react-router-dom"
-
 const Navigation = () => {
   return (
     <Navbar collapseOnSelect expand="lg" bg="light" variant="pills" sticky="top" >
@@ -55,16 +53,3 @@ const Navigation = () => {
 
 export default Navigation;
 
-
-
-
-// export const Nav = styled.nav`
-//     height: 80px;
-//     width: 100%;
-//     background: rgba(0, 0, 0, 0.5);
-//     color: white;
-//     // position: sticky;
-//     position: fixed;
-//     top: 0;
-//     padding: 30px;
-// `
