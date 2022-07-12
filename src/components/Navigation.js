@@ -1,36 +1,13 @@
 // eslint-disable-next-line
 
 import React from 'react';
+import { Link } from 'react-router-dom'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import './Navigation.css'
 
 const Navigation = () => {
-<<<<<<< HEAD
-    return (
-    <Navbar collapseOnSelect expand="md" bg="light" variant="light" sticky="top">
-    
-    <Container>
-        <Navbar.Brand href="#Home">일산방주교회</Navbar.Brand>
-        
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-
-            <Nav className="justify-content-end flex-grow-1 pe-3">
-                <Nav.Link className='nav-items' href="#words">주일말씀</Nav.Link>
-                <Nav.Link className='nav-items' href="#sermon">설교목록</Nav.Link>
-                <Nav.Link className='nav-items' href="#service">예배안내</Nav.Link>
-                <Nav.Link className='nav-items' href="#offering">온라인헌금</Nav.Link>
-                <Nav.Link className='nav-items' href="#way">오시는길</Nav.Link>
-                <Nav.Link className='nav-items' href="#minister">교역자안내</Nav.Link>
-                <Nav.Link className='nav-items' href="#contact">CONTACT</Nav.Link>
-            </Nav>
-        </Navbar.Collapse>
-    </Container>
-    </Navbar>
-    );
-=======
   return (
     <Navbar collapseOnSelect expand="lg" bg="light" variant="pills" sticky="top" >
     <Container>
@@ -72,7 +49,6 @@ const Navigation = () => {
     </Container>
     </Navbar>
 );
->>>>>>> ab829f3d9f389be470b82242a2fa8e4119ce9ef8
 }
 
 export default Navigation;
