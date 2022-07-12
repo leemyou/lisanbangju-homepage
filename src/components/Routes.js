@@ -1,6 +1,6 @@
 // 라우트
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter,Routes, Route } from 'react-router-dom';
 
 import Home from '../pages/Home';
 import Words from '../pages/Words';
@@ -12,7 +12,7 @@ import Minister from '../pages/Minister';
 import Contact from '../pages/Contact';
 
 export default function Routes() {
-    <BrowserRouter>
+    <Routes>
             <Route exact path="/" element={<Home/>} />
             <Route exact path="/words" element={<Words/>} />
             <Route exact path="/sermon" element={<Sermon/>} />
@@ -21,5 +21,5 @@ export default function Routes() {
             <Route exact path="/way" element={<Way/>} />
             <Route exact path="/minister" element={<Minister/>} />
             <Route exact path="/contact" element={<Contact/>} />
-    </BrowserRouter>
+    </Routes>
 }

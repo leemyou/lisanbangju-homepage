@@ -49,7 +49,7 @@ const List = ({columns, data}) => {
             {headerGroups.map((headerGroup) => (
                 <TR {...headerGroup.getHeaderGroupProps()}>
                     {headerGroup.headers.map((column) => (
-                        <TH {...column.getHeaderProps()}><a href='#'>{column.render("Header")}</a></TH>
+                        <TH {...column.getHeaderProps()}>{column.render("Header")}</TH>
                     ))}
                 </TR>
             ))}
