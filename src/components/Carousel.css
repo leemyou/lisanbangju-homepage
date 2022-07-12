@@ -1,5 +1,7 @@
 .carousel{
     text-align: center;
+    height: 70vh;
+    background-color: rosybrown;
 }
 
 .carouse-item {

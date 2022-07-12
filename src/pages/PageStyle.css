@@ -2,7 +2,7 @@
 
 .main-body {
     width: 100%;
-    height: 110vh;
+    height: 100vh;
     background-color: rgb(163, 138, 138);
     /* padding-top: 100px; */
 }
@@ -10,4 +10,5 @@
 .main-title {
     text-align: center;
     padding-top: 100px;
+    font-size: 1.5em;
 }
