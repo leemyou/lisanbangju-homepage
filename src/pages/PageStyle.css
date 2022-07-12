@@ -9,11 +9,12 @@
 
 .main-title {
     text-align: center;
-    padding-top: 130px;
+    padding-top: 120px;
+    font-size: 1.5em;
 }
 
 .main-title-line {
-    width: 200px;
+    width: 140px;
     margin: 0 auto;
     margin-top: 10px;
     border: 1px solid #5b5b5b;

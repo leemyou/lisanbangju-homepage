@@ -82,6 +82,7 @@ const Sermonlist = () => {
     return (
         <div className='main-body' id="sermon">
             <h1 className='main-title'>설교목록</h1>
+        	<hr className='main-title-line'/>
             
             <List columns={columns} data={data} />
 
