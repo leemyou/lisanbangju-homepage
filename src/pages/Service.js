@@ -6,6 +6,8 @@ function Service() {
   return (
     <div className='main-body' id='service'>
         <h1 className='main-title'>예배안내</h1>
+        <hr className='main-title-line'/>
+
     </div>
   )
 }

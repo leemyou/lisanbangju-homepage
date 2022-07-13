@@ -6,6 +6,8 @@ const Minister = () => {
     return (
     <div className='main-body' id='minister'>
         <h1 className='main-title'>교역자안내</h1>
+        <hr className='main-title-line'/>
+
     </div>
     )
 }

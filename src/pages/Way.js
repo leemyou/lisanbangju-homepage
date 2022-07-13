@@ -7,6 +7,8 @@ const Way = () => {
   return (
     <div className='main-body' id='way'>
         <h1 className='main-title'>오시는 길</h1>
+        <hr className='main-title-line'/>
+
         <Map/>
     </div>
   )
