@@ -1,11 +1,13 @@
 //오시는길 페이지
 import React from 'react'
 import styled from 'styled-components';
+import Map from '../components/Map'
 
 const Way = () => {
   return (
     <div className='main-body' id='way'>
         <h1 className='main-title'>오시는 길</h1>
+        <Map/>
     </div>
   )
 
