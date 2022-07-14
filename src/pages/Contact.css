@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.contact-body {
+    background-color: #c8c8c8;
+    height: 63vh;
+}
+
+.contact-body h3 {
+    margin-top: 40px;
+}
+.contact-body p {
+    margin-top: 20px;
+}
+
+.contact-body > ul {
+    background-color: #c8c8c8;
+    max-width: 1500px;
+    height: 100vh;
+
+    display: flex;
+    width: 85%;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    height : 100%;
+}
+
+.contact-body li {
+    border: 0px solid #fff;
+    list-style: none;
+    text-align: center;
+    height: 60%;
+    width: 370px;
+    padding: 0 20px;
+    position: relative;
+}
+
+
+
+/* 바로가기 링크 버튼 */
+.contact-link {
+    text-decoration: none;
+    font-size:1.1rem;
+    font-weight: bold;
+    color: rgb(87, 131, 181);
+    position: absolute;
+    bottom: 0;
+    transform: translateX(-50%)
+}
+
+.contact-link:hover {
+    transition: 0.4s;
+}
+
+.contact-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
