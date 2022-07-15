@@ -17,7 +17,7 @@
     margin: auto 0;
     border: none;
 
-    background: url(D:\2022\project\lisanbangju\lisanbangju-homepage\public\img\logo_blue.png) no-repeat center;
+    background: url(../../public/img/logo_blue.png) no-repeat center;
     background-size: cover;
 }
 
