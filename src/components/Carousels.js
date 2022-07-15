@@ -10,10 +10,7 @@ function CarouselFadeExample() {
         <Carousel.Item style={{height:'100vh'}}>
         <Holder
                 className=" w-100 h-100"
-                width= '800px'
-                height= '50%'
                 updateOnResize={true}
-                text='"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"'
                 alt="First Selide"
                 placeholder={{ 
                     theme: 'lava',
@@ -28,14 +25,11 @@ function CarouselFadeExample() {
         <Carousel.Item style={{height:'100vh'}}>
             <Holder
                 className="d-block w-100 h-100"
-                width= '800px'
-                height= '90%'
-                text='"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"'
                 updateOnResize={true}
                 alt="First Selide"
             />
             <Carousel.Caption className='Carousel-title'>
-                <h1>No Cross No Crown</h1>
+                <h1 style={{overflow:'hidden'}}>No Cross No Crown</h1>
                 <p>십자가 없이는 면류관도 없다</p>
             </Carousel.Caption>
         </Carousel.Item>
@@ -43,8 +37,6 @@ function CarouselFadeExample() {
         <Carousel.Item style={{height:'100vh'}}>
             <Holder
                 className="d-block w-100 h-100"
-                width= '800px'
-                height= '90%'
                 updateOnResize={true}
                 
                 alt="First Selide"
