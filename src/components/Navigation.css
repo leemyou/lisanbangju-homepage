@@ -1,3 +1,47 @@
-.nav-items {
-    font-size: 1rem;
+@charset 'utf-8';
+
+*{
+    margin:0;
+    padding: 0;
+    text-decoration:none;
+}
+
+.navbar:hover ul{
+    right: 0;
+}
+
+.nav-logo {
+    width: 10vh;
+    height: 6vh;
+    background-color: red;
+    margin: auto 0;
+    border: none;
+
+    background: url(D:\2022\project\lisanbangju\lisanbangju-homepage\public\img\logo_blue.png) no-repeat center;
+    background-size: cover;
+}
+
+
+.btn-nav {
+    /* margin-right: 20px; */
+    height: 5rem;
+    padding: 0 10px;
+
+    border: none;
+}
+.btn-nav:hover {
+    font-weight: bold;
+}
+/* .btn-nav:last-child {
+    margin-right: 0;
+} */
+
+
+@media (max-width:991){
+    .btn-nav{
+        width: 100vw;
+        text-align: center;
+        
+    }
+
 }
