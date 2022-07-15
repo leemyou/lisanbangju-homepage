@@ -5,7 +5,7 @@ import React from 'react'
 const Offering = () => {
     const goKakao = () => {
         // 기능추가 해야함
-        alert('카카오톡 바로가기로 이동기능 추가 요함')
+        window.open('http://pf.kakao.com/_MCSNb/chat')
     }
 
   return (

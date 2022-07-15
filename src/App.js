@@ -1,8 +1,8 @@
 import './App.css';
 import Page from './pages/Page';
 import Navigation from './components/Navigation'
+import Footer from './components/Footer'
 import { BrowserRouter } from 'react-router-dom';
-
 
 function App() {
   return (
@@ -10,6 +10,7 @@ function App() {
       <BrowserRouter>
         <Navigation/>
         <Page/>
+        <Footer/>
       
       </BrowserRouter>
 
