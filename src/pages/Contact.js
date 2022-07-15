@@ -6,7 +6,7 @@ import './Contact.css';
 
 const Contact = () => {
     return (
-        <div id="contact" className="main-body">
+        <div id="contact" className="main-body" >
             <h1 className='main-title'>CONTACT</h1>
             <hr className='main-title-line' />
 
