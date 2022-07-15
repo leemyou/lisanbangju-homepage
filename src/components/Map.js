@@ -40,11 +40,10 @@ const Map = () => {
                 width: '100%',
                 height: '60vh',
                 backgroundColor: '#c8c8c8'
-            }} 
+                }} 
                 id='map'
             >
             </div>
-            {/* <MapBody id='map'/> */}
         </>
     )
 }
