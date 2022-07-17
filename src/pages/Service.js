@@ -29,5 +29,9 @@ export const Container = styled.div`
     width: 60%;
     height: 60vh;
     background-color: #111;
-    margin: 0 auto
+    margin: 0 auto;
+
+    @media (max-width: 991px) {
+        width: 100%;
+    }
 `

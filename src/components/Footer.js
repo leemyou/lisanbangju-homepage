@@ -6,44 +6,42 @@ import logo from '../img/logo_white.png';
 
 const Footerbody = styled.footer`
     background-color: #464646;
-    height: 33vh;
+    width: 100%;
+    height: 80%;
     position: relative;
     margin: 0;
     padding: 0;
-
+    
     @media (max-width: 991px){
-        height: 450px;
+        height: 100%;
     }
 `
 const Logo = styled.img`
+    display: block;
+    margin: 0 auto;
     width: 19vh;
-    position: absolute;
-    left: 5vw;
-    top: 50%;
-    transform: translateY(-50%) ;
 
-    @media (max-width: 991px) {
-        top: 10px;
-        left: 50%;
-        transform: translateX(-50%) ;
-    }
+    /* @media (max-width: 991px) {
+    } */
 `
 const FooterText = styled.span`
-    position: absolute;
     text-align: center;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%) ;
     color: #fff;
     font-weight: 100;
+
+    @media (max-width: 991px) {
+        display: block;
+        margin: 0 auto;
+    }
 `
 
 const CRight = styled.p`
     color: #bbbbbb;
+    padding-bottom: 30px;
 
     @media (max-width: 991px) {
-        position: absolute;
-        bottom: -130px;
+        margin-top: 60px;
+        padding-bottom: 20px;
     }
 `
 

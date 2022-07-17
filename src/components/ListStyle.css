@@ -11,7 +11,6 @@
 
 .table-sheet {
     width: 70vw;
-    /* background-color:red; */
 }
 
 
@@ -42,4 +41,15 @@ tr:hover:not(.table-head > tr) {
     padding-left: 10px;
     border-bottom: 1px solid #c8c8c8;
     /* // background-color: red; */
+}
+
+
+
+
+/* 모바일/패드 반응형 */
+@media (max-width: 1000px) {
+    .table-sheet {
+        width: 100vw;
+    }
+
 }

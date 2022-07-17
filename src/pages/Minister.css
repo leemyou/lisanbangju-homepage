@@ -4,10 +4,11 @@
 }
 
 .minister-body{
-    width: 100%;
+    width: 70%;
     display: flex;
     justify-content: center;
-    margin-top: 5%;
+    margin: 5% auto 0 auto;
+    
 }
 
 .minister-item{
@@ -27,6 +28,17 @@
     margin-top: 10px;
 }
 
+
+
+@media (max-width: 1300px){
+    .minister-body{
+        width: 90%;
+    }
+
+}
+
+
+
 @media (max-width: 900px){
     #minister {
         height: 100%;
@@ -34,6 +46,7 @@
 
     .minister-body{
         display:block;
+        width: 90%;
     }
 
     .minister-item{
@@ -54,16 +67,3 @@
     }
 }
 
-@media (max-width: 640px){
-    .minister-item{
-        width: 250px;
-        height: 350px;
-        background-color: white;
-        border-radius: 20px;
-        overflow: hidden;
-        box-shadow: 2px 15px 15px 5px gray;
-
-        margin-bottom: 70px;
-    }
-
-}
