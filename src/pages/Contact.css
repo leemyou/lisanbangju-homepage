@@ -32,12 +32,19 @@
     border: 0px solid #fff;
     list-style: none;
     text-align: center;
-    height: 60%;
+    height: 330px;
     width: 370px;
     padding: 0 20px;
     position: relative;
 }
 
+
+/* 이미지 */
+.contact-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
 
 
 /* 바로가기 링크 버튼 */
@@ -45,7 +52,7 @@
     text-decoration: none;
     font-size:1.1rem;
     font-weight: bold;
-    color: rgb(87, 131, 181);
+    color: rgb(58, 58, 187);
     position: absolute;
     bottom: 0;
     transform: translateX(-50%)
@@ -55,8 +62,10 @@
     transition: 0.4s;
 }
 
-.contact-img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-}
+
+
+/* 이미지 url넣어주기 */
+/* .contact-img:nth-child(1) {
+    background: url(../../public/img/kakao.png);
+    background-size: cover;
+} */

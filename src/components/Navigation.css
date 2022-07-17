@@ -11,13 +11,12 @@
 }
 
 .nav-logo {
-    width: 10vh;
-    height: 6vh;
-    background-color: red;
+    width: 100px;
+    height: 57px;
     margin: auto 0;
     border: none;
 
-    background: url(../../public/img/logo_blue.png) no-repeat center;
+    background: url(../img/logo_blue.png) no-repeat center;
     background-size: cover;
 }
 

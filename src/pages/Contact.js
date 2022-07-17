@@ -3,8 +3,12 @@
 import React from 'react'
 import './PageStyle.css';
 import './Contact.css';
+import kakaoimg from '../img/kakao.png';
+import youtubeimg from '../img/youtube.png';
+import instaimg from '../img/instagram.png';
 
 const Contact = () => {
+
     return (
         <div id="contact" className="main-body" >
             <h1 className='main-title'>CONTACT</h1>
@@ -13,7 +17,7 @@ const Contact = () => {
             <div className='contact-body'>
                 <ul >
                     <li>
-                        <img src='img/kakao.png' alt='kakao' className='contact-img'/>
+                        <img src={kakaoimg} className='contact-img' alt='kakao'/>
                         <h3>Kakao</h3>
                         <p>
                             일산방주교회 카카오톡 채널입니다 <br/>
@@ -24,7 +28,7 @@ const Contact = () => {
                     </li>
 
                     <li>
-                        <img src='img/youtube.png' alt='youtube' className='contact-img'/>
+                        <img src={youtubeimg} alt='youtube' className='contact-img'/>
                         <h3>YouTube</h3>
                         <p>
                             일산방주교회 유튜브 채널입니다 <br/>
@@ -35,7 +39,7 @@ const Contact = () => {
                     </li>
 
                     <li>
-                        <img src='img/instagram.png' alt='instagram' className='contact-img'/>
+                        <img src={instaimg} alt='instagram' className='contact-img'/>
                         <h3>Instagram</h3>
                         <p>일산방주교회 인스타그램입니다 <br/>
                             팔로우하시면 교회소식들을 보실 수 있고,<br/>
