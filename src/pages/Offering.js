@@ -20,7 +20,7 @@ const Offering = () => {
         <hr className='main-title-line'/>
 
         <Contents>
-            <h2>00은행&nbsp;&nbsp; 0000-000-000000&nbsp;&nbsp;<br/> 예금주:일산방주교회</h2>
+            <h2>기업은행&nbsp;&nbsp; 4580-508090-1019&nbsp;&nbsp;<br/> 예금주:일산방주교회</h2>
             <p>기부금영수증 신청 및 기타 문의사항은 일산방주교회 카카오톡으로 문의 부탁드립니다.</p>
         
             <button className='btn-offer-kakao' onClick={goKakao}>카카오톡 바로가기</button>
