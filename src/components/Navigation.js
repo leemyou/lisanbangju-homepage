@@ -6,7 +6,7 @@ import './Navigation.css'
 
 function CollapsibleExample() {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="light" variant="light" fixed='top' style={{width: '100vw',}}>
+    <Navbar collapseOnSelect expand="lg" bg="light" variant="light" fixed='top'>
         <Container>
             <Navbar.Brand>
                 <Link to="Home" spy={true} smooth={true}>
