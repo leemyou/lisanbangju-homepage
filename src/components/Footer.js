@@ -10,6 +10,10 @@ const Footerbody = styled.footer`
     position: relative;
     margin: 0;
     padding: 0;
+
+    @media (max-width: 991px){
+        height: 450px;
+    }
 `
 const Logo = styled.img`
     width: 19vh;
@@ -17,6 +21,12 @@ const Logo = styled.img`
     left: 5vw;
     top: 50%;
     transform: translateY(-50%) ;
+
+    @media (max-width: 991px) {
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%) ;
+    }
 `
 const FooterText = styled.span`
     position: absolute;
@@ -30,6 +40,11 @@ const FooterText = styled.span`
 
 const CRight = styled.p`
     color: #bbbbbb;
+
+    @media (max-width: 991px) {
+        position: absolute;
+        bottom: -130px;
+    }
 `
 
 const Footer = () => {
