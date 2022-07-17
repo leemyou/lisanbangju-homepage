@@ -3,6 +3,7 @@
 }
 
 .minister-body{
+    width: 100vw;
     display: flex;
     justify-content: center;
     margin-top: 5%;
@@ -10,7 +11,8 @@
 
 .minister-item{
     justify-content: space-between;
-    margin: 0 40px;
+    margin: 0 auto;
+    width: 250px;
     height: 350px;
     background-color: white;
     border-radius: 20px;
@@ -24,7 +26,7 @@
     margin-top: 10px;
 }
 
-@media (max-width: 991px){
+@media (max-width: 900px){
     #minister {
         height: 100%;
     }
@@ -44,7 +46,23 @@
         margin-bottom: 70px;
     }
 
+
+
     .minister-item:last-child {
         margin-bottom: 140px;
     }
+}
+
+@media (max-width: 640px){
+    .minister-item{
+        width: 250px;
+        height: 350px;
+        background-color: white;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 2px 15px 15px 5px gray;
+
+        margin-bottom: 70px;
+    }
+
 }
