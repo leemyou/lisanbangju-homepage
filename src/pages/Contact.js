@@ -27,7 +27,6 @@ const Contact = () => {
                             </p>
                             <a className='contact-link' href='http://pf.kakao.com/_MCSNb'>바로가기</a>
                         </div>
-                        
                     </li>
 
                     <li>
