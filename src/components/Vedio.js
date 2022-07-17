@@ -19,9 +19,9 @@ function Vedio() {
                 //여기 영상 주소는 매주 바뀌어야 함
                 src={url}
                 title="YouTube video player" 
-                frameborder="0" 
+                frameBorder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
+                allowFullScreen>
             </iframe>
 
         </VedioMain>

@@ -1,82 +1,47 @@
 // 설교목록 페이지
 
-import React, {useMemo,} from 'react'
-// import axios from 'axios'
+import React, {useState} from 'react'
 import styled from 'styled-components';
 import List from '../components/List'
-// import Pagination from '../components/Pagination';
+
+import {firestore} from '../components/Firebase';
+import Pagination from '../components/Pagination'
 
 const Sermonlist = () => {
-    // const [posts, setPosts] = useState([]);
-    // useEffect(() => {
-    //     const fetchData = async () => {
-    //         const response = await axios.get(
-    //             "https://jsonplaceholder.typicode.com/posts"
-    //         );
-    //         setPosts(response.data);
-    //     }
-    //     fetchData();
-    // }, [])
-    // const data = useMemo(() => posts, [posts]);
 
-    const columns = useMemo(() => 
-    [
-        {
-            accessor: 'sermonTitle',  // 데이터 오브젝트와 연결할 이름
-            Header: '설교 제목' // 실제 테이블에 나타나는 이름
-        },
-        {
-            accessor: 'sermonBody', 
-            Header: '본문'
-        },
-        {
-            accessor: 'service',
-            Header: '예배'
-        },
-        {
-            accessor: 'sermonDate',
-            Header: '날짜'
-        },
-        {
-            accessor: 'minister',
-            Header: '설교자'
+    const sermon_data = useState([]);
+    const [currentPage, setCurrentPage] = useState(1);
+    const [sermonPerPage, setsermonPerPage] = useState(10);
+
+    const sermon = firestore.collection('sermon');
+
+    //전체 확인하기
+    sermon
+      .get()
+      .then((docs) => {
+      let sermon_data = [];
+      docs.forEach((doc) => {
+        // 도큐먼트 객체를 확인
+        // console.log(doc);
+        // 도큐먼트 데이터 가져오기
+        // console.log(doc.data());
+        // 도큐먼트 id 가져오기
+        // console.log(doc.id);
+
+        if (doc.exists) {
+          sermon_data = [...sermon_data, { id: doc.id, ...doc.data() }];
         }
-    ]
-    , []);
+      });
+    //   console.log(sermon_data);
+    })
 
-
-
-    const data = useMemo(() => [
-        {
-            'sermonTitle': '복음은 절대 세상과 친해질 수 없습니다',
-            'sermonBody' : '에베소서 2장 1~7절',
-            'service' : '주일예배',
-            'sermonDate' : '2022 / 07 / 10',
-            'minister' : '오시헌 담임목사'
-        },
-        {
-            'sermonTitle': '복음은 절대 세상과 친해질 수 없습니다',
-            'sermonBody' : '에베소서 2장 1~7절',
-            'service' : '주일예배',
-            'sermonDate' : '2022 / 07 / 10',
-            'minister' : '오시헌 담임목사'
-        },
-        {
-            'sermonTitle': '복음은 절대 세상과 친해질 수 없습니다',
-            'sermonBody' : '에베소서 2장 1~7절',
-            'service' : '주일예배',
-            'sermonDate' : '2022 / 07 / 10',
-            'minister' : '오시헌 담임목사'
-        },
-        {
-            'sermonTitle': '복음은 절대 세상과 친해질 수 없습니다',
-            'sermonBody' : '에베소서 2장 1~7절',
-            'service' : '주일예배',
-            'sermonDate' : '2022 / 07 / 10',
-            'minister' : '오시헌 담임목사'
-        }
-    ], [])
-
+    const indexOfLast = currentPage * sermonPerPage;
+    const indexOfFirst = currentPage - sermonPerPage;
+    const currentPosts = (sermon_data) => {
+        let currentPosts = 0;
+        currentPosts = sermon_data.slice(indexOfFirst, indexOfFirst);
+        return currentPosts;
+    }
 
 
     return (
@@ -84,7 +49,15 @@ const Sermonlist = () => {
             <h1 className='main-title'>설교목록</h1>
         	<hr className='main-title-line'/>
             
-            <List columns={columns} data={data} />
+
+        
+            
+            <List sermon={sermon_data}/>
+            <Pagination
+                sermonPerPage={sermonPerPage}
+                totalPosts={sermon_data.length}
+                paginate={setCurrentPage}
+            />
 
         </div>
     )
