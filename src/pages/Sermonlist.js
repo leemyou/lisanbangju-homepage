@@ -1,18 +1,30 @@
 // 설교목록 페이지
 
-import React, { useEffect} from 'react'
+import React, { useEffect, useState} from 'react'
+import axios from 'axios';
 import styled from 'styled-components';
 // import List from '../components/List'
 
-import {firestore} from '../components/Firebase';
-// import Pagination from '../components/Pagination'
-
 const Sermonlist = () => {
 
+    const [url, setUrl] = useState('')
+
     useEffect(() => {
-        console.log(firestore)
+        axios.get('http://localhost:2999')
+            .then(res => {
+                setUrl(res.data[0])
+                console.log(res.data.sermon[0].content)
+                setUrl(res.data.sermon[0].content)
+            })
     })
 
+    const nextPage = () => {
+        var al = document.querySelector('testing')
+
+        alert(al.innerText);
+
+
+    }
 
 
     return (
@@ -21,7 +33,12 @@ const Sermonlist = () => {
         	<hr className='main-title-line'/>
             
 
-        
+            <button id='testing' onClick={nextPage}>test</button>
+            <h4>{}
+                <b>
+                    {url}
+                </b>
+            </h4>
             
             {/* <List sermon={sermon_data}/> */}
 
