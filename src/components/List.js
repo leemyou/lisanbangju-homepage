@@ -8,8 +8,8 @@ const List = ({sermon}) => {
     return(
         <>
             <ul>
-                {sermon.map((post, idx) => (
-                    <li key={post.id}>t{sermon.id}</li>
+                {sermon.map((post) => (
+                    <li key={post.id}>t{sermon.title}</li>
                 ))}
             </ul>
         </>

@@ -13,8 +13,6 @@ const firebaseConfig = {
     measurementId: process.env.REACT_APP_MEASUREMENT_ID
 };
 
-// export { firestore };
-// export default initializeApp(firebaseConfig);
 
 // firebaseConfig 정보로 firebase 시작
 firebase.initializeApp(firebaseConfig);
@@ -23,4 +21,5 @@ firebase.initializeApp(firebaseConfig);
 const firestore = firebase.firestore();
 
 // 필요한 곳에서 사용할 수 있도록 내보내기
+// 다른 곳에서 불러올때 firestore로 불러와야 함!!
 export { firestore };
