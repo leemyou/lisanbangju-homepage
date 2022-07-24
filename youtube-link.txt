@@ -15,7 +15,7 @@
 'https://www.youtube.com/watch?v=VnUrBLnEEQw&t=711s&ab_channel=%EC%9D%BC%EC%82%B0%EB%B0%A9%EC%A3%BC%EA%B5%90%ED%9A%8C',
 '눈을 뜨게 하옵소서',
 '마가복음 10장 46~52절',
-'2022-03-08'
+'2022-03-08',
 '주일예배',
 '오시헌 전도사'
 
@@ -64,7 +64,7 @@
 'https://www.youtube.com/watch?v=FAT6X2KusSk&t=711s&ab_channel=%EC%9D%BC%EC%82%B0%EB%B0%A9%EC%A3%BC%EA%B5%90%ED%9A%8C'
 '하나님께 쓰임 받는 사람',
 '사도행전 13장 1~5절',
-2021-05-21',
+'2021-05-21',
 '성금요일예배',
 '오시헌 목사'
 
@@ -82,11 +82,11 @@
 '금요성령집회',
 '오시헌 목사'
 
-'https://www.youtube.com/watch?v=a601YAPxPzc&t=711s&ab_channel=%EC%9D%BC%EC%82%B0%EB%B0%A9%EC%A3%BC%EA%B5%90%ED%9A%8C'
+'https://www.youtube.com/watch?v=a601YAPxPzc&t=711s&ab_channel=%EC%9D%BC%EC%82%B0%EB%B0%A9%EC%A3%BC%EA%B5%90%ED%9A%8C',
 '마지막 때를 살아가는 성도의 모습',
 '데살로니가전서 5장 16~22절',
 '2021-12-17',
-'금요성령집회'
+'금요성령집회',
 '오시헌 목사'
 
 'https://www.youtube.com/watch?v=lHWY8kPSNys&t=711s&ab_channel=%EC%9D%BC%EC%82%B0%EB%B0%A9%EC%A3%BC%EA%B5%90%ED%9A%8C',

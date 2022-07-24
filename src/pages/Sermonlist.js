@@ -1,30 +1,67 @@
 // 설교목록 페이지
 
-import React, { useEffect, useState} from 'react'
+import React, { useEffect, useState, useMemo} from 'react'
 import axios from 'axios';
 import styled from 'styled-components';
-// import List from '../components/List'
+import List from '../components/List'
+import Pagination from '../components/Pagination';
 
 const Sermonlist = () => {
 
-    const [url, setUrl] = useState('')
+    const [posts, setPosts] = useState([]);
+    const [loading, setLoading] = useState(false);
+    const [currentPage, setCurrentPage] = useState(1);
+    const [postsPerPage] = useState(10);
+
+    // const [url, setUrl] = useState([]);
+
+    const columnData = [
+        {
+            accessor: 'title',
+            Header: '설교제목'
+        },
+        {
+            accessor: 'content',
+            Header: '본문'
+        },
+        {
+            accessor: 'type',
+            Header: '예배'
+        },
+        {
+            accessor: 'date',
+            Header: '예배 날짜'
+        },
+        {
+            accessor: 'talker',
+            Header: '설교자'
+        }
+    ]
+
+    const columns = useMemo(() => columnData, [columnData]);
+
 
     useEffect(() => {
-        axios.get('http://localhost:2999')
-            .then(res => {
-                setUrl(res.data[0])
-                console.log(res.data.sermon[0].content)
-                setUrl(res.data.sermon[0].content)
-            })
-    })
+        const fetchData = async () => {
+            setLoading(true); // 이 때 빙글빙글
+            const response = await axios.get(
+                'http://localhost:2999'
+            );
+                setPosts(response.data.sermon)
+                console.log(response.data.sermon)
+                // setUrl(res.data.sermon[0].youtube)
+                setLoading(false);
+        }
+        fetchData();
+    }, []);
 
-    const nextPage = () => {
-        var al = document.querySelector('testing')
-
-        alert(al.innerText);
-
-
-    }
+    const indexOfLast = currentPage * postsPerPage;
+    const indexOfFirst = indexOfLast - postsPerPage;
+    const currentPosts = (posts) => {
+        let currentPosts = 0;
+        currentPosts = posts.slice(indexOfFirst, indexOfLast);
+        return currentPosts;
+    };
 
 
     return (
@@ -32,16 +69,13 @@ const Sermonlist = () => {
             <h1 className='main-title'>설교목록</h1>
         	<hr className='main-title-line'/>
             
-
-            <button id='testing' onClick={nextPage}>test</button>
-            <h4>{}
-                <b>
-                    {url}
-                </b>
-            </h4>
             
-            {/* <List sermon={sermon_data}/> */}
-
+            <List data = {currentPosts(posts)} columns={columns} loading={loading}/>
+            <Pagination
+                postsPerPage={postsPerPage}
+                totalPosts={posts.length}
+                paginate={setCurrentPage}
+            ></Pagination>
 
         </div>
     )

@@ -10,7 +10,9 @@
 }
 
 .table-sheet {
-    width: 70vw;
+    width: 1000px;
+    background-color: RED;
+    margin: 0 auto;
 }
 
 

@@ -31,7 +31,7 @@ app.get('/', async (req, res) => {
     const pool = mysql.createPool(options);
 
     const conn = await pool.getConnection(async conn => conn);
-    const query = `SELECT * FROM sermon limit 10;`;
+    const query = `SELECT * FROM sermon ORDER BY date desc;`;
 
     const [sermon] = await conn.query(query);
 
@@ -40,19 +40,17 @@ app.get('/', async (req, res) => {
 })
 
 
-app.get('/:page', async (req, res) => {
-    // res.send('일산방주교회');
-    const pool = mysql.createPool(options);
-    const page = req.params.page*10+1;
-    const conn = await pool.getConnection(async conn => conn);
+// app.get('/:page', async (req, res) => {
+//     // res.send('일산방주교회');
+//     const pool = mysql.createPool(options);
+//     const page = req.params.page*10+1;
+//     const conn = await pool.getConnection(async conn => conn);
 
-    const query = `SELECT * FROM sermon limit ${page}, 10;`;
+//     const query = `SELECT * FROM sermon limit ${page}, 10;`;
 
-    const [sermon] = await conn.query(query);
-
-
-    res.send({sermon})
-})
+//     const [sermon] = await conn.query(query);
+//     res.send({sermon})
+// })
 
 
 app.listen(port, ()=>{
