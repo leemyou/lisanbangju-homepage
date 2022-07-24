@@ -4,13 +4,13 @@ use ilsanbangju;
 
 /* sermon table 생성 */
 CREATE TABLE `ilsanbangju`.`sermon` (
-    `youtube` VARCHAR(255) NOT NULL,
-    `title` VARCHAR(45) NOT NULL,
-    `content` VARCHAR(64) NOT NULL,
-    `date` DATE NOT NULL,
-    `type` VARCHAR(45) NOT NULL,
-    `talker` VARCHAR(45) NOT NULL,
-    PRIMARY KEY (`youtube`));
+  `youtube` VARCHAR(255) NOT NULL,
+  `title` VARCHAR(45) NOT NULL,
+  `content` VARCHAR(64) NOT NULL,
+  `date` DATE NOT NULL,
+  `type` VARCHAR(45) NOT NULL,
+  `talker` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`youtube`));
 
 
 /* 테이블 조회 */
