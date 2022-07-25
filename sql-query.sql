@@ -15,6 +15,7 @@ CREATE TABLE `ilsanbangju`.`sermon` (
 
 /* 테이블 조회 */
 select * from `sermon`;
+SELECT youtube, title, content, date_format(date,'%Y-%m-%d') as date, type, talker FROM sermon ORDER BY date desc;
 
 /* 데이터 삽입*/
 insert into `sermon`(`youtube`, `title`, `content`, `date`, `type`, `talker`) value (

@@ -3,13 +3,13 @@ import { useTable } from 'react-table';
 import './ListStyle.css';
 
 
-const List = ({ columns, data }) => {
+const List = ({ columns, data, setpagepost, loading }) => {
     const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
     useTable({ columns, data });
 
     const onClickYoutube = (e) => {
         alert('클릭 이벤트 필요~!');
-        alert(e.length);
+        alert(e.target.id);
     }
 
     return(
@@ -21,25 +21,25 @@ const List = ({ columns, data }) => {
         //     </ul>
         // </>
 
-        <table {...getTableProps()} className="table-sheet">
-        <thead>
-          {headerGroups.map((headerGroup) => (
-            <tr {...headerGroup.getHeaderGroupProps()}>
-              {headerGroup.headers.map((column) => (
-                <th {...column.getHeaderProps()}>{column.render("Header")}</th>
-              ))}
-            </tr>
-          ))}
+        <table className="table-sheet" {...getTableProps()} >
+        <thead className='table-head'>
+            {headerGroups.map((headerGroup) => (
+                <tr {...headerGroup.getHeaderGroupProps()}>
+                    {headerGroup.headers.map((column) => (
+                        <th className='ths' {...column.getHeaderProps()}>{column.render("Header")}</th>
+                    ))}
+                </tr>
+            ))}
         </thead>
 
 
-        <tbody {...getTableBodyProps()}>
+        <tbody className='table-body' {...getTableBodyProps()}>
           {rows.map((row) => {
             prepareRow(row);
             return (
-              <tr {...row.getRowProps()}  onClick={onClickYoutube} id={row.id}>
+              <tr {...row.getRowProps()}  onClick={onClickYoutube}>
                 {row.cells.map((cell) => (
-                    <td {...cell.getCellProps()}>
+                    <td className='tds' {...cell.getCellProps()} id={cell.getCellProps().key}>
                         {cell.render("Cell")}
                     </td>
                 ))}

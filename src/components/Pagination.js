@@ -9,6 +9,10 @@ const PageUl = styled.ul`
     left: 45%;
     padding: 1px;
     margin-top:40px;
+
+    @media (max-width: 1000px) {
+        display: none;
+    }
 `;
 
 const PageLi = styled.li`

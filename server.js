@@ -31,7 +31,7 @@ app.get('/', async (req, res) => {
     const pool = mysql.createPool(options);
 
     const conn = await pool.getConnection(async conn => conn);
-    const query = `SELECT * FROM sermon ORDER BY date desc;`;
+    const query = `SELECT youtube, title, content, date_format(date,'%Y-%m-%d') as date, type, talker FROM sermon ORDER BY date desc;`;
 
     const [sermon] = await conn.query(query);
 

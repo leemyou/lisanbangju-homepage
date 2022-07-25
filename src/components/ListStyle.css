@@ -11,7 +11,7 @@
 
 .table-sheet {
     width: 1000px;
-    background-color: RED;
+    background-color: #c4c4c4;
     margin: 0 auto;
 }
 
@@ -28,10 +28,11 @@
 .table-body {
     background-color: white;
     font-size: 0.9rem;
+    height: 22rem;
 }
 
 tr:hover:not(.table-head > tr) {
-    background-color: rgb(216, 216, 216);
+    background-color: #6991e1;
 }
 
 .ths {
@@ -42,7 +43,6 @@ tr:hover:not(.table-head > tr) {
     height: 2.3rem;
     padding-left: 10px;
     border-bottom: 1px solid #c8c8c8;
-    /* // background-color: red; */
 }
 
 
@@ -52,6 +52,29 @@ tr:hover:not(.table-head > tr) {
 @media (max-width: 1000px) {
     .table-sheet {
         width: 100vw;
+        /* height: 70vh; */
+    }
+
+    .table-head {
+        background-color: rgb(245, 240, 240);
+        /* height: 1rem; */
+        font-size: 0.9rem;
+        font-weight: bold;
+        color: #112f72;
+        border-bottom: 2.5px solid #c4c4c4;
+    }
+    
+    .table-body {
+        background-color: white;
+        font-size: 0.8rem;
+        height: 10rem;
+    }
+
+    .tds{
+        height: 2.3rem;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-bottom: 1px solid #c8c8c8;
     }
 
 }
