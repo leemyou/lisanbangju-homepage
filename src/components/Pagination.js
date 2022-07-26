@@ -56,7 +56,7 @@ const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
                 <PageUl className="pagination">
                     {pageNumbers.map((number) => (
                         <PageLi key={number} className="page-item">
-                            <PageSpan onClick={() => {(paginate(number)) (alert(number)) (setBackgroundColor(true))} } className="page-link">
+                            <PageSpan onClick={() => {(paginate(number)) (setBackgroundColor(true))} } className="page-link">
                                 {number}
                             </PageSpan>
                         </PageLi>
