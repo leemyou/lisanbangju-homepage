@@ -36,7 +36,6 @@ const PageSpan = styled.span`
         border-radius: 100%;
         font-weight: 600;
     }
-    // background-color:red;
 `;
 
 
@@ -46,7 +45,8 @@ const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
         pageNumbers.push(i);
     }
 
-    const [background, setBackgroundColor] = useState(false);
+    // backgroundColor 설정하는거 해보려고 시도ing
+    const [setBackgroundColor] = useState(false);
 
 
 
