@@ -25,19 +25,30 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(cors());
 
+const pool = mysql.createPool(options);
+
 
 app.get('/', async (req, res) => {
     // res.send('일산방주교회');
-    const pool = mysql.createPool(options);
 
     const conn = await pool.getConnection(async conn => conn);
     const query = `SELECT youtube, title, content, date_format(date,'%Y-%m-%d') as date, type, talker FROM sermon ORDER BY date desc;`;
+    const queryurl = `SELECT youtube FROM sermon WHERE type='주일예배' order by date desc limit 1;`;
 
     const [sermon] = await conn.query(query);
+    const [[link]] = await conn.query(queryurl);
 
 
-    res.send({sermon})
+    res.send({sermon, link})
 })
+
+// app.get('/url', async (req, res) => {
+
+//     const conn = pool.getConnection(async conn => conn);
+
+
+//     res.send(link);
+// })
 
 
 // app.get('/:page', async (req, res) => {
