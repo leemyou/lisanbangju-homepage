@@ -73,7 +73,7 @@ const Sermonlist = () => {
 
         // 처음부터 모바일 사이즈면 모바일 사이즈로 보이도록 설정
         if(window.innerWidth <= 1000) {
-            setPostsPerPage(100);
+            setPostsPerPage(50);
         }
         window.addEventListener('resize', resizingHandler);
         return () => {
@@ -92,8 +92,6 @@ const Sermonlist = () => {
         currentPosts = posts.slice(indexOfFirst, indexOfLast);
         return currentPosts;
     };
-    // 페이지네이션 안보이게
-
 
     return (
         <SermonBody className='main-body' id="sermon">
