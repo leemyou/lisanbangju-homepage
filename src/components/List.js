@@ -8,8 +8,9 @@ const List = ({ columns, data, setpagepost, loading }) => {
     useTable({ columns, data });
 
     const onClickYoutube = (e) => {
-        alert('클릭 이벤트 필요~!');
-        alert(e.target.id);
+        alert(e.target.id); // cell_0_title
+        alert(data[0].youtube);
+        // data[0].youtube
     }
 
     return(

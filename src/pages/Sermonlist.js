@@ -13,7 +13,7 @@ const Sermonlist = () => {
     const [currentPage, setCurrentPage] = useState(1);
     // 한 페이지당 보여줄 숫자
     const [postsPerPage, setPostsPerPage] = useState(10);
-
+    
 
     // 리사이즈 이벤트를 감지하여 가로 길이에 따라 모바일 결정
     const resizingHandler = () => {
@@ -51,6 +51,10 @@ const Sermonlist = () => {
 
     // const columns = useMemo(() => [ columns,columnData]);
 
+    const test = () => {
+        console.log(currentPosts(posts).youtube)
+    }
+
 
     // 데이터 호출
     useEffect(() => {
@@ -60,11 +64,11 @@ const Sermonlist = () => {
                 'http://localhost:2999'
             );
                 setPosts(response.data.sermon)
-                console.log(response.data.sermon)
-                // setUrl(res.data.sermon[0].youtube)
+                // setUrl(response.data.sermon.youtube)
                 setLoading(false);
         }
         fetchData();
+
 
 
         // 처음부터 모바일 사이즈면 모바일 사이즈로 보이도록 설정
@@ -93,7 +97,7 @@ const Sermonlist = () => {
 
     return (
         <SermonBody className='main-body' id="sermon">
-            <h1 className='main-title'>설교목록</h1>
+            <h1 className='main-title' onClick={ test }>설교목록</h1>
         	<hr className='main-title-line'/>
             
             {/* 테이블 */}

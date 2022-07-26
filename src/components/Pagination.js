@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
 
 const PageUl = styled.ul`
@@ -18,25 +18,25 @@ const PageUl = styled.ul`
 const PageLi = styled.li`
     text-align: center;
     display: block;
-    background-color: red;
     font-size: 1rem;
     border-radius: 5px;
+
     &:hover {
         cursor: pointer;
         font-weight: 600;
+        background-color: red;
+
     }
-    &:focus::after {
-        background-color:orange;
-        font-weight: 800;
-    }
+
 `;
 
 const PageSpan = styled.span`
-  &:hover::after,
-  &:focus::after {
-    border-radius: 100%;
-    font-weight: 600;
-  }
+    &:hover::after,
+    &:focus::after {
+        border-radius: 100%;
+        font-weight: 600;
+    }
+    // background-color:red;
 `;
 
 
@@ -46,6 +46,9 @@ const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
         pageNumbers.push(i);
     }
 
+    const [background, setBackgroundColor] = useState(false);
+
+
 
     return (
         <div style={{display: 'flex', backgroundColor:'lightblue'}}>
@@ -53,7 +56,7 @@ const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
                 <PageUl className="pagination">
                     {pageNumbers.map((number) => (
                         <PageLi key={number} className="page-item">
-                            <PageSpan onClick={() => paginate(number)} className="page-link">
+                            <PageSpan onClick={() => {(paginate(number)) (alert(number)) (setBackgroundColor(true))} } className="page-link">
                                 {number}
                             </PageSpan>
                         </PageLi>
