@@ -10,7 +10,7 @@ const List = ({ columns, data, setpagepost, loading }) => {
     // 클릭하면 유튜브 링크로 이동
     const onClickYoutube = (e) => {
         // console.log(e.nativeEvent.path[1].id);
-        console.log(e.target.parentElement.id);
+        // console.log(e.target.parentElement.id);
         // window.open(e.nativeEvent.path[1].id)
         window.open(e.target.parentElement.id);
         // data[0].youtube
