@@ -10,7 +10,7 @@ import instaimg from '../img/instagram.png';
 const Contact = () => {
 
     return (
-        <div id="contact" >
+        <div id="contact">
             <h1 className='main-title'>CONTACT</h1>
             <hr className='main-title-line' />
 
